@@ -1,0 +1,43 @@
+//deleting an existing record
+c = Dojo.objects.get(id=1)
+c.delete()
+
+c = Dojo.objects.get(id=2)
+c.delete()
+
+c = Dojo.objects.get(id=3)
+c.delete()
+
+//Query all records
+Dojo.objects.all()
+
+//adding more Dojos using a variable this time
+dojo1 = Dojo.objects.create(name="Dojo place", city= "Olympia", state="WA")
+dojo2 = Dojo.objects.create(name="Dojo crib", city= "Seattle", state="WA")
+dojo3 = Dojo.objects.create(name="Dojo House", city= "Portland", state="OR")
+
+//create 3ninjas that belong to the first dojo1
+ninja1 = Ninja.objects.create(first_name = "Jamina", last_name = "Flores", dojo_id = dojo1)
+ninja2 = Ninja.objects.create(first_name = "Jeraldine", last_name = "Flores", dojo_id = dojo1)
+ninja3 = Ninja.objects.create(first_name = "Jaden", last_name = "Flores", dojo_id = dojo1)
+//create 3 ninjas that belong to the 2nd dojo2
+ninja4 = Ninja.objects.create(first_name = "Cj", last_name = "Flores", dojo_id = dojo2)
+ninja5 = Ninja.objects.create(first_name = "Tina", last_name = "Flores", dojo_id = dojo2)
+ninja6 = Ninja.objects.create(first_name = "James", last_name = "Flores", dojo_id = dojo2)
+//create 3 ninjas that belong to the 3nd dojo2
+ninja7 = Ninja.objects.create(first_name = "Jack", last_name = "Jump", dojo_id = dojo3)
+ninja8 = Ninja.objects.create(first_name = "Molly", last_name = "Hole", dojo_id = dojo3)
+ninja9 = Ninja.objects.create(first_name = "Jerimiah", last_name = "Best", dojo_id = dojo3)
+
+// Retrieve all the ninjas from the first dojo1
+Dojo.objects.first().ninja.all()\
+Dojo.objects.last().ninja.all()\
+
+//retrieve the last ninja's dojo
+Ninja.objects.last().dojo_id
+
+//add a new text field called desc
+added and then  makemigrations agaion and then migrate
+
+//create new dojo
+dojo5 = Dojo.objects.create(name="Karate Kid", city= "Miami", state="FL")
